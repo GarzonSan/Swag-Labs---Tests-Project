@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-04T10:18:18.785385" rpa="false" schemaversion="5">
+<suite id="s1" name="Main Tests" source="C:\Users\Manso\Desktop\Automation_Tests\Swag Labs\Tests\main_tests.robot">
+<kw name="Start Session" owner="generics" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T10:18:18.901379" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${base_app_url}</arg>
+<arg>${target_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T10:18:18.901212" elapsed="1.978096"/>
+</kw>
+<status status="PASS" start="2026-05-04T10:18:18.900499" elapsed="1.978940"/>
+</kw>
+<test id="s1-t1" name="Authorized User Can Access The Application" line="10">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-04T10:18:22.880367" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-04T10:18:20.879865" elapsed="2.000620"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-04T10:18:22.880989" level="INFO">Testing the environment configuration</msg>
+<arg>Testing the environment configuration</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-04T10:18:22.880737" elapsed="0.000285"/>
+</kw>
+<status status="PASS" start="2026-05-04T10:18:20.879508" elapsed="2.001668"/>
+</test>
+<kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-05-04T10:18:22.881878" elapsed="0.003386"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-04T10:18:22.885336" elapsed="2.107927"/>
+</kw>
+<status status="PASS" start="2026-05-04T10:18:22.881751" elapsed="2.111666"/>
+</kw>
+<doc>This will carry the main/smoke tests for the app</doc>
+<status status="PASS" start="2026-05-04T10:18:18.786348" elapsed="6.207119"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Main Tests" id="s1" pass="1" fail="0" skip="0">Main Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
