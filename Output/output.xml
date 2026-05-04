@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-04T20:08:28.571598" rpa="false" schemaversion="5">
+<suite id="s1" name="Main Tests" source="C:\Users\Manso\Desktop\Automation_Tests\Swag Labs\Swag Labs - Tests Project\Tests\main_tests.robot">
+<test id="s1-t1" name="Authorized User Can Access The Application" line="11">
+<kw name="Start Session" owner="generics" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:28.684854" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${base_app_url}</arg>
+<arg>${target_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T20:08:28.684683" elapsed="1.021425"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:28.684256" elapsed="1.021993"/>
+</kw>
+<kw name="LogIn User" owner="login_page">
+<kw name="Enter Username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:29.707148" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<arg>${login_field_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:29.706921" elapsed="0.047885"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-05-04T20:08:29.706798" elapsed="0.048116"/>
+</kw>
+<kw name="Enter Password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:29.755434" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<arg>${passw_field_locator}</arg>
+<arg>${test_env_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:29.755246" elapsed="0.036436"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:29.755046" elapsed="0.036731"/>
+</kw>
+<kw name="Submit LogIn Form" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:29.792190" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<arg>${submit_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:29.792054" elapsed="0.050864"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:29.791893" elapsed="0.051146"/>
+</kw>
+<arg>${user_standard}</arg>
+<status status="PASS" start="2026-05-04T20:08:29.706571" elapsed="0.136508"/>
+</kw>
+<kw name="Check If Error Was Not Raised" owner="login_page">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${error_message_container_locator}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-05-04T20:08:29.843524" elapsed="0.005527"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:29.843345" elapsed="0.005763"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-04T20:08:34.849628" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-04T20:08:29.849304" elapsed="5.000431"/>
+</kw>
+<kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-05-04T20:08:34.850397" elapsed="0.004432"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-04T20:08:34.854912" elapsed="2.106848"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:34.850209" elapsed="2.111698"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:28.683801" elapsed="8.278340"/>
+</test>
+<test id="s1-t2" name="Locked User Cannot Access The Application" line="19">
+<kw name="Start Session" owner="generics" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:36.963227" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${base_app_url}</arg>
+<arg>${target_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-04T20:08:36.963090" elapsed="1.366275"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:36.962906" elapsed="1.366582"/>
+</kw>
+<kw name="LogIn User" owner="login_page">
+<kw name="Enter Username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:38.330289" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<arg>${login_field_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:38.330148" elapsed="0.047681"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-05-04T20:08:38.329970" elapsed="0.047989"/>
+</kw>
+<kw name="Enter Password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:38.378485" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<arg>${passw_field_locator}</arg>
+<arg>${test_env_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:38.378321" elapsed="0.035213"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:38.378101" elapsed="0.035527"/>
+</kw>
+<kw name="Submit LogIn Form" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-04T20:08:38.414045" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<arg>${submit_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-04T20:08:38.413914" elapsed="0.037615"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:38.413746" elapsed="0.037913"/>
+</kw>
+<arg>${user_locked}</arg>
+<status status="PASS" start="2026-05-04T20:08:38.329754" elapsed="0.121946"/>
+</kw>
+<kw name="Check If Error Was Raised Properly" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_message_container_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-04T20:08:38.452125" elapsed="0.008855"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:38.451939" elapsed="0.009094"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-04T20:08:43.461480" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-04T20:08:38.461211" elapsed="5.000377"/>
+</kw>
+<kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-05-04T20:08:43.462255" elapsed="0.004606"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-04T20:08:43.466939" elapsed="2.094825"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:43.462061" elapsed="2.099808"/>
+</kw>
+<status status="PASS" start="2026-05-04T20:08:36.962612" elapsed="8.599428"/>
+</test>
+<doc>This will carry the main/smoke tests for the app</doc>
+<status status="PASS" start="2026-05-04T20:08:28.572546" elapsed="16.990201"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Main Tests" id="s1" pass="2" fail="0" skip="0">Main Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

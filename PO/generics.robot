@@ -16,6 +16,9 @@ ${user_performance_glitch}    performance_glitch_user
 ${user_error}    error_user
 ${user_visual}    visual_user
 
+# default passwords used for all users
+${test_env_password}    secret_sauce
+
 *** Keywords ***
 Start Session
     Open Browser    ${base_app_url}    ${target_browser}
