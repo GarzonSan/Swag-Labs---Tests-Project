@@ -35,6 +35,3 @@ LogIn User
     Enter Password
     Submit LogIn Form
     Sleep    4
-    # # the line below is a temp workaround to avoid the insecure password pop-up due to the nature of this test application
-    # # as it has default users and dont let an account to be created for testing.
-    # Press Key    xpath://body    ENTER

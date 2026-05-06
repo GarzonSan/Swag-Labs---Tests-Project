@@ -9,19 +9,19 @@ Resource    ../PO/store_page.robot
 
 *** Test Cases ***
 # Login Scenarios #
-# Authorized User Can Access The Application
-#     # PRE CONDITION
-#     [Setup]    generics.Start Session   
-#      login_page.LogIn User    ${user_standard}
-#      login_page.Check If Error Was Not Raised
-#     [Teardown]    generics.End Session No Cookies
+Authorized User Can Access The Application
+    # PRE CONDITION
+    [Setup]    generics.Start Session   
+     login_page.LogIn User    ${user_standard}
+     login_page.Check If Error Was Not Raised
+    [Teardown]    generics.End Session No Cookies
 
-# Locked User Cannot Access The Application
-#     # PRE CONDITION
-#     [Setup]    generics.Start Session    
-#     login_page.LogIn User    ${user_locked}
-#     login_page.Check If Error Was Raised Properly
-#     [Teardown]    generics.End Session No Cookies
+Locked User Cannot Access The Application
+    # PRE CONDITION
+    [Setup]    generics.Start Session    
+    login_page.LogIn User    ${user_locked}
+    login_page.Check If Error Was Raised Properly
+    [Teardown]    generics.End Session No Cookies
 
 # Store Page Scenarios
 User Can Access Store Page Properly
