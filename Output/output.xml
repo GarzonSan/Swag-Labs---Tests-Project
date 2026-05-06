@@ -1,161 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-04T20:08:28.571598" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-06T17:20:49.072162" rpa="false" schemaversion="5">
 <suite id="s1" name="Main Tests" source="C:\Users\Manso\Desktop\Automation_Tests\Swag Labs\Swag Labs - Tests Project\Tests\main_tests.robot">
-<test id="s1-t1" name="Authorized User Can Access The Application" line="11">
+<test id="s1-t1" name="User Can Access Store Page Properly" line="27">
 <kw name="Start Session" owner="generics" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:28.684854" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-05-06T17:20:49.181131" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${base_app_url}</arg>
 <arg>${target_browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-04T20:08:28.684683" elapsed="1.021425"/>
+<status status="PASS" start="2026-05-06T17:20:49.180970" elapsed="0.979959"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:28.684256" elapsed="1.021993"/>
+<status status="PASS" start="2026-05-06T17:20:49.180544" elapsed="0.980640"/>
 </kw>
 <kw name="LogIn User" owner="login_page">
 <kw name="Enter Username" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:29.707148" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<msg time="2026-05-06T17:20:50.162124" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
 <arg>${login_field_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:29.706921" elapsed="0.047885"/>
+<status status="PASS" start="2026-05-06T17:20:50.161893" elapsed="0.048025"/>
 </kw>
 <arg>${username}</arg>
-<status status="PASS" start="2026-05-04T20:08:29.706798" elapsed="0.048116"/>
+<status status="PASS" start="2026-05-06T17:20:50.161762" elapsed="0.048262"/>
 </kw>
 <kw name="Enter Password" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:29.755434" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2026-05-06T17:20:50.210546" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
 <arg>${passw_field_locator}</arg>
 <arg>${test_env_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:29.755246" elapsed="0.036436"/>
+<status status="PASS" start="2026-05-06T17:20:50.210376" elapsed="0.034811"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:29.755046" elapsed="0.036731"/>
+<status status="PASS" start="2026-05-06T17:20:50.210152" elapsed="0.035135"/>
 </kw>
 <kw name="Submit LogIn Form" owner="login_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:29.792190" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<msg time="2026-05-06T17:20:50.245708" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
 <arg>${submit_button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:29.792054" elapsed="0.050864"/>
+<status status="PASS" start="2026-05-06T17:20:50.245580" elapsed="0.048865"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:29.791893" elapsed="0.051146"/>
+<status status="PASS" start="2026-05-06T17:20:50.245417" elapsed="0.049125"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-06T17:20:54.295176" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-06T17:20:50.294647" elapsed="4.000639"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>xpath://body</arg>
+<arg>ENTER</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.295434" elapsed="0.019107"/>
 </kw>
 <arg>${user_standard}</arg>
-<status status="PASS" start="2026-05-04T20:08:29.706571" elapsed="0.136508"/>
+<status status="PASS" start="2026-05-06T17:20:50.161527" elapsed="4.153093"/>
 </kw>
-<kw name="Check If Error Was Not Raised" owner="login_page">
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${error_message_container_locator}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2026-05-04T20:08:29.843524" elapsed="0.005527"/>
+<kw name="Get Initial Cart Items Amount" owner="store_page">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-05-06T17:20:54.391345" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-06T17:20:54.391493" level="FAIL">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</msg>
+<arg>xpath:${store_cart_badge_locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-05-06T17:20:54.315379" elapsed="0.077660">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</status>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:29.843345" elapsed="0.005763"/>
+<msg time="2026-05-06T17:20:54.393150" level="INFO">${is_cart_badge_visible} = False</msg>
+<var>${is_cart_badge_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath:${store_cart_badge_locator}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.315131" elapsed="0.078033"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-04T20:08:34.849628" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-04T20:08:29.849304" elapsed="5.000431"/>
+<if>
+<branch type="IF" condition="${is_cart_badge_visible}==False">
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-05-06T17:20:54.393673" level="INFO">${store_cart_items_amount} = 0</msg>
+<arg>${store_cart_items_amount}</arg>
+<arg>0</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.393403" elapsed="0.000293"/>
 </kw>
-<kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
-<kw name="Delete All Cookies" owner="SeleniumLibrary">
-<doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-05-04T20:08:34.850397" elapsed="0.004432"/>
+<status status="PASS" start="2026-05-06T17:20:54.393240" elapsed="0.000484"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${store_cart_items_amount}</var>
+<arg>xpath:${store_cart_badge_locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-06T17:20:54.393808" elapsed="0.000014"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-05-04T20:08:34.854912" elapsed="2.106848"/>
+<status status="NOT RUN" start="2026-05-06T17:20:54.393750" elapsed="0.000094"/>
+</branch>
+<status status="PASS" start="2026-05-06T17:20:54.393216" elapsed="0.000646"/>
+</if>
+<status status="PASS" start="2026-05-06T17:20:54.314913" elapsed="0.078978"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:34.850209" elapsed="2.111698"/>
-</kw>
-<status status="PASS" start="2026-05-04T20:08:28.683801" elapsed="8.278340"/>
+<status status="PASS" start="2026-05-06T17:20:49.180124" elapsed="5.213997"/>
 </test>
-<test id="s1-t2" name="Locked User Cannot Access The Application" line="19">
-<kw name="Start Session" owner="generics" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:36.963227" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${base_app_url}</arg>
-<arg>${target_browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-04T20:08:36.963090" elapsed="1.366275"/>
+<test id="s1-t2" name="User Can Add An Item To The Cart" line="33">
+<kw name="Add Product To Cart" owner="store_page">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-06T17:20:54.395267" level="INFO">2</msg>
+<arg>${product_index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.395140" elapsed="0.000151"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:36.962906" elapsed="1.366582"/>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath:(${store_add_to_cart_button_locator})[${product_index}]</arg>
+<arg>4s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.395351" elapsed="0.011359"/>
 </kw>
-<kw name="LogIn User" owner="login_page">
-<kw name="Enter Username" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:38.330289" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@id='user-name']'.</msg>
-<arg>${login_field_locator}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:38.330148" elapsed="0.047681"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-05-04T20:08:38.329970" elapsed="0.047989"/>
-</kw>
-<kw name="Enter Password" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:38.378485" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
-<arg>${passw_field_locator}</arg>
-<arg>${test_env_password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:38.378321" elapsed="0.035213"/>
-</kw>
-<status status="PASS" start="2026-05-04T20:08:38.378101" elapsed="0.035527"/>
-</kw>
-<kw name="Submit LogIn Form" owner="login_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-05-04T20:08:38.414045" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
-<arg>${submit_button_locator}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-04T20:08:38.413914" elapsed="0.037615"/>
-</kw>
-<status status="PASS" start="2026-05-04T20:08:38.413746" elapsed="0.037913"/>
-</kw>
-<arg>${user_locked}</arg>
-<status status="PASS" start="2026-05-04T20:08:38.329754" elapsed="0.121946"/>
-</kw>
-<kw name="Check If Error Was Raised Properly" owner="login_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${error_message_container_locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-04T20:08:38.452125" elapsed="0.008855"/>
-</kw>
-<status status="PASS" start="2026-05-04T20:08:38.451939" elapsed="0.009094"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-06T17:20:54.406955" level="INFO">Clicking element 'xpath:(//button[contains(@id,'add-to-cart-sauce-labs')])[2]'.</msg>
+<arg>xpath:(${store_add_to_cart_button_locator})[${product_index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-06T17:20:54.406808" elapsed="0.022688"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-04T20:08:43.461480" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2026-05-06T17:20:55.429881" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-04T20:08:38.461211" elapsed="5.000377"/>
+<status status="PASS" start="2026-05-06T17:20:54.429624" elapsed="1.000390"/>
 </kw>
-<kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
-<kw name="Delete All Cookies" owner="SeleniumLibrary">
-<doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-05-04T20:08:43.462255" elapsed="0.004606"/>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2026-05-06T17:20:55.517716" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-17.png"&gt;&lt;img src="selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath:(${store_item_locator_base})[${product_index}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2026-05-06T17:20:55.430171" elapsed="0.087635"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-05-04T20:08:43.466939" elapsed="2.094825"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-05-06T17:21:00.662522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-06T17:21:00.662652" level="FAIL">Element 'xpath://span[@class='shopping_cart_badge']' not visible after 5 seconds.</msg>
+<arg>xpath:${store_cart_badge_locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-05-06T17:20:55.517935" elapsed="5.145525">Element 'xpath://span[@class='shopping_cart_badge']' not visible after 5 seconds.</status>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:43.462061" elapsed="2.099808"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${current_cart_amount}</var>
+<arg>xpath:${store_cart_badge_locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663692" elapsed="0.000023"/>
 </kw>
-<status status="PASS" start="2026-05-04T20:08:36.962612" elapsed="8.599428"/>
+<if>
+<branch type="IF" condition="${current_cart_amount}&gt;${store_cart_items_amount}">
+<kw name="Set Suite Variable" owner="BuiltIn">
+<arg>${store_cart_items_amount}</arg>
+<arg>${current_cart_amount}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663853" elapsed="0.000013"/>
+</kw>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663779" elapsed="0.000106"/>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663950" elapsed="0.000010"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Cart Badge didn't increase count after adding item.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-05-06T17:21:00.664001" elapsed="0.000011"/>
+</kw>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663906" elapsed="0.000122"/>
+</branch>
+<status status="NOT RUN" start="2026-05-06T17:21:00.663759" elapsed="0.000284"/>
+</if>
+<arg>2</arg>
+<status status="FAIL" start="2026-05-06T17:20:54.394994" elapsed="6.269114">Element 'xpath://span[@class='shopping_cart_badge']' not visible after 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-05-06T17:20:54.394610" elapsed="6.269702">Element 'xpath://span[@class='shopping_cart_badge']' not visible after 5 seconds.</status>
 </test>
 <doc>This will carry the main/smoke tests for the app</doc>
-<status status="PASS" start="2026-05-04T20:08:28.572546" elapsed="16.990201"/>
+<status status="FAIL" start="2026-05-06T17:20:49.073059" elapsed="11.591734"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Main Tests" id="s1" pass="2" fail="0" skip="0">Main Tests</stat>
+<stat name="Main Tests" id="s1" pass="1" fail="1" skip="0">Main Tests</stat>
 </suite>
 </statistics>
 <errors>

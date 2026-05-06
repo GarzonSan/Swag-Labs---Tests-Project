@@ -5,7 +5,7 @@ Documentation    This file contains all keywords that might be shared
 Library    SeleniumLibrary
 
 *** Variables ***
-${target_browser}    Chrome
+${target_browser}    chrome
 ${base_app_url}    https://www.saucedemo.com/
 
 # user names
@@ -20,6 +20,8 @@ ${user_visual}    visual_user
 ${test_env_password}    secret_sauce
 
 *** Keywords ***
+
+
 Start Session
     Open Browser    ${base_app_url}    ${target_browser}
 
