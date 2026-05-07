@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-06T17:42:13.102687" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-07T18:20:55.384778" rpa="false" schemaversion="5">
 <suite id="s1" name="Main Tests" source="C:\Users\Manso\Desktop\Automation_Tests\Swag Labs\Swag Labs - Tests Project\Tests\main_tests.robot">
 <test id="s1-t1" name="Authorized User Can Access The Application" line="12">
 <kw name="Start Session" owner="generics" type="SETUP">
 <if>
 <branch type="IF" condition="'${target_browser}' == 'chrome'">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:13.215478" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002D80B517230&gt;</msg>
+<msg time="2026-05-07T18:20:55.507673" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001787FE27230&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.214102" elapsed="0.001405"/>
+<status status="PASS" start="2026-05-07T18:20:55.506224" elapsed="0.001476"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.215597" elapsed="0.000152"/>
+<status status="PASS" start="2026-05-07T18:20:55.507788" elapsed="0.000143"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.215809" elapsed="0.000110"/>
+<status status="PASS" start="2026-05-07T18:20:55.508002" elapsed="0.000108"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-geolocation</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.215968" elapsed="0.000096"/>
+<status status="PASS" start="2026-05-07T18:20:55.508158" elapsed="0.000099"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.216109" elapsed="0.000090"/>
+<status status="PASS" start="2026-05-07T18:20:55.508302" elapsed="0.000092"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:13.216370" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
+<msg time="2026-05-07T18:20:55.508565" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
 <var>${prefs}</var>
 <arg>{"credentials_enable_service": False, "profile.password_manager_enabled": False, "profile.password_manager_leak_detection": False}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.216244" elapsed="0.000142"/>
+<status status="PASS" start="2026-05-07T18:20:55.508440" elapsed="0.000140"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -54,134 +54,134 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.216431" elapsed="0.000107"/>
+<status status="PASS" start="2026-05-07T18:20:55.508625" elapsed="0.000106"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:13.220824" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2026-05-07T18:20:55.513099" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.216588" elapsed="0.518095"/>
+<status status="PASS" start="2026-05-07T18:20:55.508780" elapsed="0.530098"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:13.213744" elapsed="0.521015"/>
+<status status="PASS" start="2026-05-07T18:20:55.505883" elapsed="0.533071"/>
 </branch>
-<status status="PASS" start="2026-05-06T17:42:13.213728" elapsed="0.521071"/>
+<status status="PASS" start="2026-05-07T18:20:55.505866" elapsed="0.533128"/>
 </if>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:13.735023" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<msg time="2026-05-07T18:20:56.039214" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
 <arg>${base_app_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-05-06T17:42:13.734897" elapsed="0.644819"/>
+<status status="PASS" start="2026-05-07T18:20:56.039090" elapsed="3.239111"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:13.213584" elapsed="1.166239"/>
+<status status="PASS" start="2026-05-07T18:20:55.505727" elapsed="3.772617"/>
 </kw>
 <kw name="LogIn User" owner="login_page">
 <kw name="Enter Username" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:14.380821" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<msg time="2026-05-07T18:20:59.279312" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
 <arg>${login_field_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:14.380556" elapsed="0.060348"/>
+<status status="PASS" start="2026-05-07T18:20:59.279079" elapsed="0.049567"/>
 </kw>
 <arg>${username}</arg>
-<status status="PASS" start="2026-05-06T17:42:14.380385" elapsed="0.060620"/>
+<status status="PASS" start="2026-05-07T18:20:59.278928" elapsed="0.049828"/>
 </kw>
 <kw name="Enter Password" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:14.441453" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2026-05-07T18:20:59.329215" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
 <arg>${passw_field_locator}</arg>
 <arg>${test_env_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:14.441306" elapsed="0.036886"/>
+<status status="PASS" start="2026-05-07T18:20:59.329068" elapsed="0.034801"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:14.441134" elapsed="0.037158"/>
+<status status="PASS" start="2026-05-07T18:20:59.328889" elapsed="0.035076"/>
 </kw>
 <kw name="Submit LogIn Form" owner="login_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:14.478746" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<msg time="2026-05-07T18:20:59.364447" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
 <arg>${submit_button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:14.478610" elapsed="0.053438"/>
+<status status="PASS" start="2026-05-07T18:20:59.364299" elapsed="0.050602"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:14.478425" elapsed="0.053732"/>
+<status status="PASS" start="2026-05-07T18:20:59.364092" elapsed="0.050938"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-06T17:42:18.532908" level="INFO">Slept 4 seconds.</msg>
+<msg time="2026-05-07T18:21:03.415499" level="INFO">Slept 4 seconds.</msg>
 <arg>4</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-06T17:42:14.532278" elapsed="4.000735"/>
+<status status="PASS" start="2026-05-07T18:20:59.415159" elapsed="4.000466"/>
 </kw>
 <arg>${user_standard}</arg>
-<status status="PASS" start="2026-05-06T17:42:14.380159" elapsed="4.152936"/>
+<status status="PASS" start="2026-05-07T18:20:59.278646" elapsed="4.137080"/>
 </kw>
 <kw name="Check If Error Was Not Raised" owner="login_page">
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>${error_message_container_locator}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2026-05-06T17:42:18.533788" elapsed="0.005375"/>
+<status status="PASS" start="2026-05-07T18:21:03.416465" elapsed="0.005617"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:18.533480" elapsed="0.005735"/>
+<status status="PASS" start="2026-05-07T18:21:03.416158" elapsed="0.005975"/>
 </kw>
 <kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
 <kw name="Delete All Cookies" owner="SeleniumLibrary">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-05-06T17:42:18.539622" elapsed="0.003747"/>
+<status status="PASS" start="2026-05-07T18:21:03.422494" elapsed="0.003789"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-05-06T17:42:18.543466" elapsed="2.101006"/>
+<status status="PASS" start="2026-05-07T18:21:03.426354" elapsed="2.087922"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:18.539461" elapsed="2.105127"/>
+<status status="PASS" start="2026-05-07T18:21:03.422339" elapsed="2.092103"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:13.213070" elapsed="7.431708"/>
+<status status="PASS" start="2026-05-07T18:20:55.504992" elapsed="10.009654"/>
 </test>
 <test id="s1-t2" name="Locked User Cannot Access The Application" line="19">
 <kw name="Start Session" owner="generics" type="SETUP">
 <if>
 <branch type="IF" condition="'${target_browser}' == 'chrome'">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:20.646312" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002D80B5E2AD0&gt;</msg>
+<msg time="2026-05-07T18:21:05.516383" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001787FEF2AD0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.646059" elapsed="0.000272"/>
+<status status="PASS" start="2026-05-07T18:21:05.516132" elapsed="0.000272"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.646390" elapsed="0.000114"/>
+<status status="PASS" start="2026-05-07T18:21:05.516461" elapsed="0.000113"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.646551" elapsed="0.000091"/>
+<status status="PASS" start="2026-05-07T18:21:05.516621" elapsed="0.000093"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-geolocation</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.646788" elapsed="0.000105"/>
+<status status="PASS" start="2026-05-07T18:21:05.516898" elapsed="0.000105"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.646937" elapsed="0.000089"/>
+<status status="PASS" start="2026-05-07T18:21:05.517047" elapsed="0.000089"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:20.647188" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
+<msg time="2026-05-07T18:21:05.517292" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
 <var>${prefs}</var>
 <arg>{"credentials_enable_service": False, "profile.password_manager_enabled": False, "profile.password_manager_leak_detection": False}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.647069" elapsed="0.000132"/>
+<status status="PASS" start="2026-05-07T18:21:05.517179" elapsed="0.000126"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -189,134 +189,134 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.647243" elapsed="0.000102"/>
+<status status="PASS" start="2026-05-07T18:21:05.517346" elapsed="0.000103"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:20.647484" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2026-05-07T18:21:05.517588" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2026-05-06T17:42:20.647398" elapsed="0.498111"/>
+<status status="PASS" start="2026-05-07T18:21:05.517503" elapsed="0.499983"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:20.645904" elapsed="0.499679"/>
+<status status="PASS" start="2026-05-07T18:21:05.515954" elapsed="0.501608"/>
 </branch>
-<status status="PASS" start="2026-05-06T17:42:20.645888" elapsed="0.499735"/>
+<status status="PASS" start="2026-05-07T18:21:05.515934" elapsed="0.501671"/>
 </if>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:21.145837" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<msg time="2026-05-07T18:21:06.017817" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
 <arg>${base_app_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-05-06T17:42:21.145717" elapsed="0.428432"/>
+<status status="PASS" start="2026-05-07T18:21:06.017698" elapsed="3.237567"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:20.645745" elapsed="0.928494"/>
+<status status="PASS" start="2026-05-07T18:21:05.515778" elapsed="3.739583"/>
 </kw>
 <kw name="LogIn User" owner="login_page">
 <kw name="Enter Username" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:21.574997" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<msg time="2026-05-07T18:21:09.256212" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@id='user-name']'.</msg>
 <arg>${login_field_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:21.574864" elapsed="0.047654"/>
+<status status="PASS" start="2026-05-07T18:21:09.256069" elapsed="0.049255"/>
 </kw>
 <arg>${username}</arg>
-<status status="PASS" start="2026-05-06T17:42:21.574739" elapsed="0.047872"/>
+<status status="PASS" start="2026-05-07T18:21:09.255863" elapsed="0.049562"/>
 </kw>
 <kw name="Enter Password" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:21.623041" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2026-05-07T18:21:09.305870" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
 <arg>${passw_field_locator}</arg>
 <arg>${test_env_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:21.622904" elapsed="0.034857"/>
+<status status="PASS" start="2026-05-07T18:21:09.305729" elapsed="0.035044"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:21.622736" elapsed="0.035118"/>
+<status status="PASS" start="2026-05-07T18:21:09.305556" elapsed="0.035315"/>
 </kw>
 <kw name="Submit LogIn Form" owner="login_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:21.658301" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<msg time="2026-05-07T18:21:09.341295" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
 <arg>${submit_button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:21.658171" elapsed="0.038519"/>
+<status status="PASS" start="2026-05-07T18:21:09.341163" elapsed="0.040698"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:21.657999" elapsed="0.038798"/>
+<status status="PASS" start="2026-05-07T18:21:09.340996" elapsed="0.040964"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-06T17:42:25.697200" level="INFO">Slept 4 seconds.</msg>
+<msg time="2026-05-07T18:21:13.382347" level="INFO">Slept 4 seconds.</msg>
 <arg>4</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-06T17:42:21.696913" elapsed="4.000390"/>
+<status status="PASS" start="2026-05-07T18:21:09.382067" elapsed="4.000410"/>
 </kw>
 <arg>${user_locked}</arg>
-<status status="PASS" start="2026-05-06T17:42:21.574528" elapsed="4.122850"/>
+<status status="PASS" start="2026-05-07T18:21:09.255654" elapsed="4.126917"/>
 </kw>
 <kw name="Check If Error Was Raised Properly" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${error_message_container_locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-06T17:42:25.697935" elapsed="0.009889"/>
+<status status="PASS" start="2026-05-07T18:21:13.383186" elapsed="0.010093"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:25.697729" elapsed="0.010153"/>
+<status status="PASS" start="2026-05-07T18:21:13.382906" elapsed="0.010421"/>
 </kw>
 <kw name="End Session No Cookies" owner="generics" type="TEARDOWN">
 <kw name="Delete All Cookies" owner="SeleniumLibrary">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-05-06T17:42:25.708340" elapsed="0.003857"/>
+<status status="PASS" start="2026-05-07T18:21:13.393656" elapsed="0.003718"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-05-06T17:42:25.712276" elapsed="2.085391"/>
+<status status="PASS" start="2026-05-07T18:21:13.397449" elapsed="2.092261"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:25.708128" elapsed="2.089662"/>
+<status status="PASS" start="2026-05-07T18:21:13.393530" elapsed="2.096305"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:20.645376" elapsed="7.152566"/>
+<status status="PASS" start="2026-05-07T18:21:05.515224" elapsed="9.974798"/>
 </test>
 <test id="s1-t3" name="User Can Access Store Page Properly" line="27">
 <kw name="Start Session" owner="generics" type="SETUP">
 <if>
 <branch type="IF" condition="'${target_browser}' == 'chrome'">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:27.799216" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002D80B5E0550&gt;</msg>
+<msg time="2026-05-07T18:21:15.491508" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001787FEF0550&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.798927" elapsed="0.000308"/>
+<status status="PASS" start="2026-05-07T18:21:15.491273" elapsed="0.000252"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.799303" elapsed="0.000120"/>
+<status status="PASS" start="2026-05-07T18:21:15.491579" elapsed="0.000108"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.799472" elapsed="0.000092"/>
+<status status="PASS" start="2026-05-07T18:21:15.491732" elapsed="0.000091"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-geolocation</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.799606" elapsed="0.000089"/>
+<status status="PASS" start="2026-05-07T18:21:15.491865" elapsed="0.000090"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.799737" elapsed="0.000083"/>
+<status status="PASS" start="2026-05-07T18:21:15.491997" elapsed="0.000085"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-06T17:42:27.799973" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
+<msg time="2026-05-07T18:21:15.492235" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'profile.password_manager_leak_detection': False}</msg>
 <var>${prefs}</var>
 <arg>{"credentials_enable_service": False, "profile.password_manager_enabled": False, "profile.password_manager_leak_detection": False}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.799861" elapsed="0.000125"/>
+<status status="PASS" start="2026-05-07T18:21:15.492124" elapsed="0.000123"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -324,186 +324,186 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.800028" elapsed="0.000100"/>
+<status status="PASS" start="2026-05-07T18:21:15.492288" elapsed="0.000103"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:27.800332" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2026-05-07T18:21:15.492619" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2026-05-06T17:42:27.800250" elapsed="0.499359"/>
+<status status="PASS" start="2026-05-07T18:21:15.492537" elapsed="0.499224"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:27.798759" elapsed="0.500925"/>
+<status status="PASS" start="2026-05-07T18:21:15.491132" elapsed="0.500704"/>
 </branch>
-<status status="PASS" start="2026-05-06T17:42:27.798745" elapsed="0.500971"/>
+<status status="PASS" start="2026-05-07T18:21:15.491118" elapsed="0.500751"/>
 </if>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:28.299929" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<msg time="2026-05-07T18:21:15.992078" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
 <arg>${base_app_url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-05-06T17:42:28.299810" elapsed="0.393574"/>
+<status status="PASS" start="2026-05-07T18:21:15.991960" elapsed="3.218299"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:27.798626" elapsed="0.894866"/>
+<status status="PASS" start="2026-05-07T18:21:15.490997" elapsed="3.719361"/>
 </kw>
 <kw name="LogIn User" owner="login_page">
 <kw name="Enter Username" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:28.694293" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<msg time="2026-05-07T18:21:19.211163" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
 <arg>${login_field_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:28.694165" elapsed="0.045657"/>
+<status status="PASS" start="2026-05-07T18:21:19.211035" elapsed="0.047175"/>
 </kw>
 <arg>${username}</arg>
-<status status="PASS" start="2026-05-06T17:42:28.694024" elapsed="0.045890"/>
+<status status="PASS" start="2026-05-07T18:21:19.210890" elapsed="0.047418"/>
 </kw>
 <kw name="Enter Password" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:28.740524" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2026-05-07T18:21:19.258739" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@id='password']'.</msg>
 <arg>${passw_field_locator}</arg>
 <arg>${test_env_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:28.740310" elapsed="0.034435"/>
+<status status="PASS" start="2026-05-07T18:21:19.258601" elapsed="0.035318"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:28.740034" elapsed="0.034809"/>
+<status status="PASS" start="2026-05-07T18:21:19.258433" elapsed="0.035592"/>
 </kw>
 <kw name="Submit LogIn Form" owner="login_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:28.775441" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
+<msg time="2026-05-07T18:21:19.294542" level="INFO">Clicking button 'xpath://input[@id='login-button']'.</msg>
 <arg>${submit_button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:28.775313" elapsed="0.046188"/>
+<status status="PASS" start="2026-05-07T18:21:19.294403" elapsed="0.049157"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:28.775123" elapsed="0.046528"/>
+<status status="PASS" start="2026-05-07T18:21:19.294178" elapsed="0.049482"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-06T17:42:32.822141" level="INFO">Slept 4 seconds.</msg>
+<msg time="2026-05-07T18:21:23.344025" level="INFO">Slept 4 seconds.</msg>
 <arg>4</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-06T17:42:28.821782" elapsed="4.000467"/>
+<status status="PASS" start="2026-05-07T18:21:19.343757" elapsed="4.000397"/>
 </kw>
 <arg>${user_standard}</arg>
-<status status="PASS" start="2026-05-06T17:42:28.693761" elapsed="4.128564"/>
+<status status="PASS" start="2026-05-07T18:21:19.210625" elapsed="4.133627"/>
 </kw>
 <kw name="Get Initial Cart Items Amount" owner="store_page">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:32.889177" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-05-06T17:42:32.889322" level="FAIL">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</msg>
-<arg>xpath:${store_cart_badge_locator}</arg>
+<msg time="2026-05-07T18:21:23.408077" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-07T18:21:23.408219" level="FAIL">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</msg>
+<arg>${store_cart_badge_locator}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-05-06T17:42:32.823108" elapsed="0.067706">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</status>
+<status status="FAIL" start="2026-05-07T18:21:23.345143" elapsed="0.064577">Element with locator 'xpath://span[@class='shopping_cart_badge']' not found.</status>
 </kw>
-<msg time="2026-05-06T17:42:32.890914" level="INFO">${is_cart_badge_visible} = False</msg>
+<msg time="2026-05-07T18:21:23.409824" level="INFO">${is_cart_badge_visible} = False</msg>
 <var>${is_cart_badge_visible}</var>
 <arg>Element Should Be Visible</arg>
-<arg>xpath:${store_cart_badge_locator}</arg>
+<arg>${store_cart_badge_locator}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.822903" elapsed="0.068025"/>
+<status status="PASS" start="2026-05-07T18:21:23.344902" elapsed="0.064938"/>
 </kw>
 <if>
 <branch type="IF" condition="${is_cart_badge_visible}==False">
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-05-06T17:42:32.891357" level="INFO">${store_cart_items_amount} = 0</msg>
+<msg time="2026-05-07T18:21:23.410262" level="INFO">${store_cart_items_amount} = 0</msg>
 <arg>${store_cart_items_amount}</arg>
 <arg>0</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.891144" elapsed="0.000234"/>
+<status status="PASS" start="2026-05-07T18:21:23.410052" elapsed="0.000232"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:32.890992" elapsed="0.000410"/>
+<status status="PASS" start="2026-05-07T18:21:23.409902" elapsed="0.000407"/>
 </branch>
 <branch type="ELSE">
 <kw name="Get Text" owner="SeleniumLibrary">
 <var>${store_cart_items_amount}</var>
-<arg>xpath:${store_cart_badge_locator}</arg>
+<arg>${store_cart_badge_locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-05-06T17:42:32.891479" elapsed="0.000012"/>
+<status status="NOT RUN" start="2026-05-07T18:21:23.410389" elapsed="0.000012"/>
 </kw>
-<status status="NOT RUN" start="2026-05-06T17:42:32.891424" elapsed="0.000086"/>
+<status status="NOT RUN" start="2026-05-07T18:21:23.410332" elapsed="0.000088"/>
 </branch>
-<status status="PASS" start="2026-05-06T17:42:32.890973" elapsed="0.000550"/>
+<status status="PASS" start="2026-05-07T18:21:23.409884" elapsed="0.000550"/>
 </if>
-<status status="PASS" start="2026-05-06T17:42:32.822699" elapsed="0.068851"/>
+<status status="PASS" start="2026-05-07T18:21:23.344643" elapsed="0.065817"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:27.798294" elapsed="5.093405"/>
+<status status="PASS" start="2026-05-07T18:21:15.490569" elapsed="7.920038"/>
 </test>
 <test id="s1-t4" name="User Can Add An Item To The Cart" line="33">
 <kw name="Add Product To Cart" owner="store_page">
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-05-06T17:42:32.892517" level="INFO">2</msg>
+<msg time="2026-05-07T18:21:23.411439" level="INFO">2</msg>
 <arg>${product_index}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.892394" elapsed="0.000170"/>
+<status status="PASS" start="2026-05-07T18:21:23.411321" elapsed="0.000142"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath:(${store_add_to_cart_button_locator})[${product_index}]</arg>
-<arg>4s</arg>
+<arg>${store_add_to_cart_button_locator}\[${product_index}\]</arg>
+<arg>5s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.892647" elapsed="0.011095"/>
+<status status="PASS" start="2026-05-07T18:21:23.411516" elapsed="0.010984"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:32.903971" level="INFO">Clicking element 'xpath:(//button[contains(@id,'add-to-cart-sauce-labs')])[2]'.</msg>
-<arg>xpath:(${store_add_to_cart_button_locator})[${product_index}]</arg>
+<msg time="2026-05-07T18:21:23.422769" level="INFO">Clicking element 'xpath:(//button[contains(@id,'add-to-cart-sauce-labs')])[2]'.</msg>
+<arg>${store_add_to_cart_button_locator}\[${product_index}\]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.903833" elapsed="0.025202"/>
+<status status="PASS" start="2026-05-07T18:21:23.422604" elapsed="0.024695"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-06T17:42:33.929560" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-07T18:21:24.447778" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-06T17:42:32.929152" elapsed="1.000538"/>
+<status status="PASS" start="2026-05-07T18:21:23.447416" elapsed="1.000495"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:34.015923" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>xpath:(${store_item_locator_base})[${product_index}]</arg>
+<msg time="2026-05-07T18:21:24.536808" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-2.png"&gt;&lt;img src="selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${store_item_locator_base}\[${product_index}\]</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2026-05-06T17:42:33.929845" elapsed="0.086166"/>
+<status status="PASS" start="2026-05-07T18:21:24.448086" elapsed="0.088809"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath:${store_cart_badge_locator}</arg>
+<arg>${store_cart_badge_locator}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-06T17:42:34.016146" elapsed="0.007428"/>
+<status status="PASS" start="2026-05-07T18:21:24.537028" elapsed="0.007178"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-05-06T17:42:34.031586" level="INFO">${current_cart_amount} = 1</msg>
+<msg time="2026-05-07T18:21:24.553299" level="INFO">${current_cart_amount} = 1</msg>
 <var>${current_cart_amount}</var>
-<arg>xpath:${store_cart_badge_locator}</arg>
+<arg>${store_cart_badge_locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-06T17:42:34.023682" elapsed="0.007929"/>
+<status status="PASS" start="2026-05-07T18:21:24.544321" elapsed="0.009004"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_cart_amount}&gt;${store_cart_items_amount}">
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-05-06T17:42:34.032042" level="INFO">${store_cart_items_amount} = 1</msg>
+<msg time="2026-05-07T18:21:24.553759" level="INFO">${store_cart_items_amount} = 1</msg>
 <arg>${store_cart_items_amount}</arg>
 <arg>${current_cart_amount}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-05-06T17:42:34.031835" elapsed="0.000311"/>
+<status status="PASS" start="2026-05-07T18:21:24.553550" elapsed="0.000231"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:34.031682" elapsed="0.000492"/>
+<status status="PASS" start="2026-05-07T18:21:24.553397" elapsed="0.000443"/>
 </branch>
 <branch type="ELSE">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2026-05-06T17:42:34.032254" elapsed="0.000011"/>
+<status status="NOT RUN" start="2026-05-07T18:21:24.553918" elapsed="0.000013"/>
 </kw>
 <kw name="Fail" owner="BuiltIn">
 <arg>Cart Badge didn't increase count after adding item.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-05-06T17:42:34.032306" elapsed="0.000010"/>
+<status status="NOT RUN" start="2026-05-07T18:21:24.553971" elapsed="0.000011"/>
 </kw>
-<status status="NOT RUN" start="2026-05-06T17:42:34.032198" elapsed="0.000135"/>
+<status status="NOT RUN" start="2026-05-07T18:21:24.553864" elapsed="0.000135"/>
 </branch>
-<status status="PASS" start="2026-05-06T17:42:34.031664" elapsed="0.000683"/>
+<status status="PASS" start="2026-05-07T18:21:24.553381" elapsed="0.000633"/>
 </if>
 <arg>2</arg>
-<status status="PASS" start="2026-05-06T17:42:32.892253" elapsed="1.140123"/>
+<status status="PASS" start="2026-05-07T18:21:23.411182" elapsed="1.142861"/>
 </kw>
-<status status="PASS" start="2026-05-06T17:42:32.891978" elapsed="1.140554"/>
+<status status="PASS" start="2026-05-07T18:21:23.410889" elapsed="1.143338"/>
 </test>
 <doc>This will carry the main/smoke tests for the app</doc>
-<status status="PASS" start="2026-05-06T17:42:13.103572" elapsed="20.929375"/>
+<status status="PASS" start="2026-05-07T18:20:55.385677" elapsed="29.168950"/>
 </suite>
 <statistics>
 <total>
