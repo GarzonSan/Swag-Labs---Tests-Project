@@ -35,6 +35,7 @@ Add Product To Cart
     Wait Until Element Is Visible    ${store_cart_badge_locator}    timeout=5s
     ${current_cart_amount}=    Get Text    ${store_cart_badge_locator}
 
+    #CASE -> Visual information about cart contents not updating
     IF    ${current_cart_amount}>${store_cart_items_amount}
         Set Suite Variable    ${store_cart_items_amount}    ${current_cart_amount}
     ELSE
