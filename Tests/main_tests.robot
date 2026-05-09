@@ -3,6 +3,7 @@ Documentation    This will carry the main/smoke tests for the app
 Resource    ../PO/generics.robot
 Resource    ../PO/login_page.robot
 Resource    ../PO/store_page.robot
+Resource    ../PO/cart_page.robot
 
 # Suite Setup    generics.Start Session
 # Suite Teardown    generics.End Session No Cookies
@@ -30,5 +31,11 @@ User Can Access Store Page Properly
     login_page.LogIn User    ${user_standard}
     Get Initial Cart Items Amount
 
-User Can Add An Item To The Cart
-    Add Product To Cart    2
+User Can Add Items To The Cart
+    store_page.Add Product To Cart    2
+    store_page.Add Product To Cart    3
+
+# Cart Page Scenarios [WIP]
+Cart Items Amount Was Correctly Placed
+    Goto Page URL    cart.html
+    cart_page.Get Cart Items Amount
