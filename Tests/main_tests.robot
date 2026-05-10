@@ -35,7 +35,17 @@ User Can Add Items To The Cart
     store_page.Add Product To Cart    2
     store_page.Add Product To Cart    3
 
-# Cart Page Scenarios [WIP]
-Cart Items Amount Was Correctly Placed
-    Goto Page URL    cart.html
-    cart_page.Get Cart Items Amount
+# Cart Page Scenarios
+Cart Items Amount Was Displayed After Adding Items
+    Goto Page URL    ${cart_page_url_complement}
+    cart_page.Update Cart Items Amount
+
+User Can Add New Items To The Cart
+    # make sure that is in the cart page
+    Goto Page URL    ${cart_page_url_complement}
+    cart_page.Add New Item To The Cart    4
+
+User Can Remove Items From the Cart
+    # make sure that is in the cart page
+    Goto Page URL    ${cart_page_url_complement}
+    cart_page.Remove Top Item From Cart

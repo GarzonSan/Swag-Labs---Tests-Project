@@ -6,6 +6,9 @@ Resource    store_page.robot
 
 
 *** Variables ***
+# page
+${cart_page_url_complement}    cart.html
+
 # processing
 ${cart_continue_shopping_button_locator}    xpath://button[@id='continue-shopping']
 ${cart_checkout_button_locator}    xpath://button[@id='checkout']
@@ -18,8 +21,43 @@ ${cart_item_remove_button_locator}    xpath:(//div[@class='cart_item']//div[@cla
 ${cart_items_amount}    0
 
 *** Keywords ***
-Get Cart Items Amount
+Update Cart Items Amount
     @{items}=    Get WebElements    ${cart_list_item_locator}
     ${cart_items_amount}=    Get Length    ${items}
-    Log    ${items}
-    Log    ${cart_items_amount}
+
+Remove Top Item From Cart
+    [Setup]    Update Cart Items Amount
+    ${current_items_amount}=    Set Variable    ${cart_items_amount}
+
+    Click Element    ${cart_item_remove_button_locator}
+    Sleep    0.5
+    Update Cart Items Amount
+
+    IF    ${current_items_amount}>=${cart_items_amount}
+        Fail    Cart item count didnt update after item removal.
+        Capture Page Screenshot
+    ELSE
+        Log    Cart item updated accordingly after item removal.
+    END
+
+Add New Item To The Cart
+    [Arguments]    ${item_index}
+    [Setup]    Update Cart Items Amount
+    ${current_items_amount}=    Set Variable    ${cart_items_amount}
+
+    # Goto previous/store page
+    Click Element    ${cart_continue_shopping_button_locator}
+    Sleep    2
+    # add new item from store page
+    store_page.Add Product To Cart    ${item_index}
+    # return to cart page
+    generics.Goto Page URL    ${cart_page_url_complement}
+
+    Update Cart Items Amount
+    IF    ${current_items_amount}>=${cart_items_amount}
+        Fail    Cart item count didnt update after adding a new item.
+        Capture Page Screenshot
+    ELSE
+        Log    Cart item updated accordingly after adding a new item.
+    END
+
